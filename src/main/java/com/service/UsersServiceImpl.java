@@ -29,7 +29,7 @@ public class UsersServiceImpl implements UsersService{
 	
 	public Users updateUsers(Users users) {
         // TODO Auto-generated method stub
-        return usersDao.updateEmployee(users);
+        return usersDao.updateUser(users);
     }
 	
 }

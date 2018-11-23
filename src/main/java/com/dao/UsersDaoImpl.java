@@ -21,4 +21,9 @@ public class UsersDaoImpl implements UsersDao {
 		return sessionFactory.getCurrentSession().createQuery("from Employee").list();
 	}
 
+	public Users updateUser(Users user) {
+		sessionFactory.getCurrentSession().update(user);
+        return user;
+	}
+
 }

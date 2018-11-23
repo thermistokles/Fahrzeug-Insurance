@@ -95,13 +95,18 @@
     <scope>provided</scope>
 </dependency>
     
-    <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
-<dependency>
-    <groupId>javax.servlet.jsp.jstl</groupId>
-    <artifactId>jstl</artifactId>
-    <version>1.2</version>
-</dependency>
+    <!-- https://mvnrepository.com/artifact/org.jboss.spec.javax.servlet.jstl/jboss-jstl-api_1.2_spec -->
+	<dependency>
+	    <groupId>org.jboss.spec.javax.servlet.jstl</groupId>
+	    <artifactId>jboss-jstl-api_1.2_spec</artifactId>
+	    <version>1.1.4.Final</version>
+	</dependency>
 
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>3.6.0.Final</version>
+    </dependency>
     
     <!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api -->
 <dependency>
