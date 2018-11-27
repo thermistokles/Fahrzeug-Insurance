@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.RowMapper;
 
 import com.model.Login;
 import com.model.User;
-
 public class UserDaoImpl implements UserDao {
 	@Autowired
 	  DataSource datasource;
