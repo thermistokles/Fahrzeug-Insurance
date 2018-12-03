@@ -8,4 +8,6 @@ public interface UserService {
 	  int register(User user);
 
 	  User validateUser(Login login);
+	  int getUid(String username);
+	  
 	}

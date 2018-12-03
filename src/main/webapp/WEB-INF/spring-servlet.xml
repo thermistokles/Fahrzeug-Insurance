@@ -40,4 +40,35 @@
 		<property name="jdbcTemplate" ref="jdbcTemplate">
 		</property>
 	</bean>
+	
+	<bean id="pdao" class="com.dao.PolicyDaoImpl">
+		<property name="template" ref="jdbcTemplate">
+		</property>
+	</bean>
+	
+	<bean id="cdao" class="com.dao.ClaimDaoImpl">
+		<property name="template" ref="jdbcTemplate">
+		</property>
+	</bean>
+	
+	<bean id="edao" class="com.dao.EstimateDaoImpl">
+		<property name="template" ref="jdbcTemplate">
+		</property>
+	</bean>
+	
+	<bean id="renewdao" class="com.dao.RenewDaoImpl">
+		<property name="template" ref="jdbcTemplate">
+		</property>
+	</bean>
+	
+	<bean id="vehicledao" class="com.dao.VehicleRegDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate">
+		</property>
+	</bean>
+	
+	<bean id="admindao" class="com.dao.AdminDaoImpl">
+		<property name="template" ref="jdbcTemplate">
+		</property>
+	</bean>
+	
 </beans>

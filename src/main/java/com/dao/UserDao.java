@@ -4,6 +4,7 @@ import com.model.Login;
 import com.model.User;
 
 public interface UserDao {
-	  int register(User user);
-	  User validateUser(Login login);
-	}
+	public int register(User u);
+	public User validateUser(Login login);
+	public int getUid(String username);
+}

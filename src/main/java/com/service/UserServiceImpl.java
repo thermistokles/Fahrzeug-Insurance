@@ -21,4 +21,8 @@ public class UserServiceImpl implements UserService {
 	    return userDao.validateUser(login);
 	  }
 
+	public int getUid(String username) {
+		return userDao.getUid(username);
+	}
+
 	}
