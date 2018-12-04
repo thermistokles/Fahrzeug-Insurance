@@ -167,6 +167,10 @@
          <p>  Don't have an account?Sign Up</p>
        	<input type="submit" value=" Register" class="link-outline"> 
        </form>
+
+			<td><form action="ForgotPass">
+       			<input type="submit" value="Forgot Password"> 
+       			</form></td>
       
           <p class="mt-3 text-center login_content form-check-label">
             <a href="Forgot.html">Forgot Password?</a>

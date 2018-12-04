@@ -27,7 +27,7 @@
 	<bean id="ds"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@192.168.100.217:1521:xe" />
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
 		<property name="username" value="system" />
 		<property name="password" value="Newuser123" />
 	</bean>
@@ -67,6 +67,11 @@
 	</bean>
 	
 	<bean id="admindao" class="com.dao.AdminDaoImpl">
+		<property name="template" ref="jdbcTemplate">
+		</property>
+	</bean>
+	
+	<bean id="padao" class="com.dao.PasswordDaoImpl">
 		<property name="template" ref="jdbcTemplate">
 		</property>
 	</bean>
