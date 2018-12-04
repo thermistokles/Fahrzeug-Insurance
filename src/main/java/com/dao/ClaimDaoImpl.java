@@ -35,8 +35,8 @@ public class ClaimDaoImpl implements ClaimDao {
 			  p.setPolicyId(rs.getInt("gp_policy_id"));
 			  p.setPolicyType(rs.getString("gp_policy_type"));
 			  p.setPolicyStatus(rs.getInt("gp_policy_status"));
-			  p.setUserVehicleRegNo(rs.getString("gp_registration_no"));
-			  p.setClaimAmount(rs.getInt("gp_claim_amount"));
+			  p.setUserVehicleRegNo(rs.getString("guv_reg_no"));
+			  p.setClaimAmount(rs.getFloat("gp_claim_amount"));
 			  p.setUserId(rs.getInt("gp_user_id"));
 			  
 		    return p;

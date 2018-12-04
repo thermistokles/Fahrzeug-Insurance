@@ -37,7 +37,7 @@ public class PolicyDaoImpl implements PolicyDao {
 	} 
 	
 	public List<Policy> show(String username) {
-	    String query = "select * from gr10_policies where gp_user_id=(select gp_user_id from gr10_users where gu_username='"+username+"')"; 
+	    String query = "select * from gr10_policies where gp_user_id=(select gu_id from gr10_users where gu_username='"+username+"')"; 
 	    List<Policy> u =template.query(query, new PolicyMapper());
 	    return u;
 	}

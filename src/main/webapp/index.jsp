@@ -105,6 +105,9 @@
                   <li class="nav-item">
                     <a href="calculate_premium_estimate" class="nav-link">Calculate Premium</a>
                   </li>
+                  <li class="nav-item">
+                    <a href="AdminLogin" class="nav-link">Admin</a>
+                  </li>
                 </ul>
               </div>
             </div>

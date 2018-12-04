@@ -108,9 +108,7 @@
               type="number"
               name="phone"
               placeholder="Enter Your Contact Number"
-              pattern="^[7-9][0-9]{9}$"
               title="Enter valid contact number"
-              max=10
               required
             />
             <input

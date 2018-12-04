@@ -56,7 +56,7 @@ public class AdminController {
 				request.setAttribute("PolicyList",l);
 			  mv = new ModelAndView("AdminPanel");
 		  }else {
-			  mv = new ModelAndView("nosuch");
+			  mv = new ModelAndView("AdminLogin");
 			  mv.addObject("message", "Username or Password is wrong!!");
 		  }
 		  return mv;
