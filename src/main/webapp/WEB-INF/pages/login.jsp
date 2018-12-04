@@ -133,12 +133,10 @@
        	<input type="submit" value=" Register" class="link-outline"> 
        </form>
 
-			<td><form action="ForgotPass">
-       			<input type="submit" value="Forgot Password"> 
-       			</form></td>
+	
       
           <p class="mt-3 text-center login_content form-check-label">
-            <a href="Forgot.html">Forgot Password?</a>
+            <a href="ForgotPass">Forgot Password?</a>
           </p>
           <p class="mt-3 text-center login_content form-check-label">
             <a href="Reset.html">Reset Password?</a>

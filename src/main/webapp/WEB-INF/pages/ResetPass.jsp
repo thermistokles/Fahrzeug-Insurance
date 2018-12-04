@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="ForgotPassProcess">
+	<form action="ResetPass">
 		<table>
 			<tr>
 			<th>Password</th>
-					<td><input type="password" name="password" required /></td>
-					<td><input type="text" value="${username}" name="username"/></td>
+					<td><input type="password" name="password" required /></td><br>
+					<td><input type="text" value="${username}" name="username" readonly="readonly"/></td>
 				</tr>
 				<tr>
 					<th>Confirm Password</th>

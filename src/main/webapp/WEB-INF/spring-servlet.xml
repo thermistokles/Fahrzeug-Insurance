@@ -6,9 +6,9 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
 		http://www.springframework.org/schema/mvc	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<context:component-scan base-package="com.controller">
+	<context:component-scan base-package="com.insurance.controller">
 	</context:component-scan>
-	<context:component-scan base-package="com.service"></context:component-scan>
+	<context:component-scan base-package="com.insurance.service"></context:component-scan>
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />
@@ -36,42 +36,42 @@
 		<property name="dataSource" ref="ds"></property>
 	</bean>
 
-	<bean id="rdao" class="com.dao.UserDaoImpl">
+	<bean id="rdao" class="com.insurance.dao.UserDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate">
 		</property>
 	</bean>
 	
-	<bean id="pdao" class="com.dao.PolicyDaoImpl">
+	<bean id="pdao" class="com.insurance.dao.PolicyDaoImpl">
 		<property name="template" ref="jdbcTemplate">
 		</property>
 	</bean>
 	
-	<bean id="cdao" class="com.dao.ClaimDaoImpl">
+	<bean id="cdao" class="com.insurance.dao.ClaimDaoImpl">
 		<property name="template" ref="jdbcTemplate">
 		</property>
 	</bean>
 	
-	<bean id="edao" class="com.dao.EstimateDaoImpl">
+	<bean id="edao" class="com.insurance.dao.EstimateDaoImpl">
 		<property name="template" ref="jdbcTemplate">
 		</property>
 	</bean>
 	
-	<bean id="renewdao" class="com.dao.RenewDaoImpl">
+	<bean id="renewdao" class="com.insurance.dao.RenewDaoImpl">
 		<property name="template" ref="jdbcTemplate">
 		</property>
 	</bean>
 	
-	<bean id="vehicledao" class="com.dao.VehicleRegDaoImpl">
+	<bean id="vehicledao" class="com.insurance.dao.VehicleRegDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate">
 		</property>
 	</bean>
 	
-	<bean id="admindao" class="com.dao.AdminDaoImpl">
+	<bean id="admindao" class="com.insurance.dao.AdminDaoImpl">
 		<property name="template" ref="jdbcTemplate">
 		</property>
 	</bean>
 	
-	<bean id="padao" class="com.dao.PasswordDaoImpl">
+	<bean id="padao" class="com.insurance.dao.PasswordDaoImpl">
 		<property name="template" ref="jdbcTemplate">
 		</property>
 	</bean>

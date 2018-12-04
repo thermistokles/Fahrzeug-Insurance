@@ -8,14 +8,14 @@
 </head>
 <body>
 	<form action="ForgotPassProcess">
-		<table>
+		<table border=2>
 			<tr>
-			<th>Username</th>
+		         	<th>Username</th>
 					<td><input type="text" name="username" required /></td>
-				</tr>
+			</tr>
 				<tr>
 					<th>Email</th>
-						<input type="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+						<td><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required></td>
 				</tr>
 				<tr>
 					<td colspan=2><input type="submit" Value="Submit" />
