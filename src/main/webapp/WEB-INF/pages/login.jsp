@@ -20,7 +20,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>
-      Login Page
+   Fahrzeug Insurance
     </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -60,49 +60,7 @@
                 >
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                      <a href="index.jsp" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a
-                        href="#"
-                        class="nav-link dropdown-toggle"
-                        data-toggle="dropdown"
-                        >Insurance</a
-                      >
-                      <div class="dropdown-menu">
-                        <a href="login.jsp" class="dropdown-item"
-                          >Buy Insurance</a
-                        >
-                        <a href="login.jsp" class="dropdown-item"
-                          >Renew Insurance</a
-                        >
-                        <a href="login.jsp" class="dropdown-item"
-                          >Claim Insurance</a
-                        >
-                        <a href="login.jsp" class="dropdown-item"
-                          >Calculate Premium</a
-                        >
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Help</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Contact</a>
-                    </li>
-                  </ul>
-  
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mt-4 mb-4">
-                      <a class="link-outline" href="login_page.html"
-                        ><i class="icon fas fa-sign-in-alt"></i>&nbsp;Login</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+      
               </div>
             </nav>
           </div>
@@ -127,19 +85,11 @@
 
             <input type="submit" value=" Login" class="link-outline"> 
           </form>
-          </br>
-          <form action="register">
-         <p>  Don't have an account?Sign Up</p>
-       	<input type="submit" value=" Register" class="link-outline"> 
+       	<input type="submit" value=" Don't have an account? Sign up" class="link-outline"> 
        </form>
-
-	
       
           <p class="mt-3 text-center login_content form-check-label">
             <a href="ForgotPass">Forgot Password?</a>
-          </p>
-          <p class="mt-3 text-center login_content form-check-label">
-            <a href="Reset.html">Reset Password?</a>
           </p>
         </div>
       </div>

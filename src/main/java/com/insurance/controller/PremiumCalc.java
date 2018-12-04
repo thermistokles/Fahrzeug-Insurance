@@ -56,7 +56,6 @@ public class PremiumCalc {
 			//get selling price
 			int sp=eserv.get_sp(uv.getUser_vehicle_model());
 			
-			System.out.println("sp"+sp);
 			
 			//calculate idv
 			

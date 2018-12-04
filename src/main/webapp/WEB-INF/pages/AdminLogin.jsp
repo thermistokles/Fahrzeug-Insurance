@@ -1,31 +1,9 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-	<form action="adminloginProcess">
-		<table>
-			<tr>
-			<th>Username</th>
-					<td><input type="text" name="username" required /></td>
-				</tr>
-				<tr>
-					<th>Password</th>
-				<td><input type="password" name="password" required /></td>
-				</tr>
-				<tr>
-					<td colspan=2><input type="submit" Value="Submit" />
-			</tr>
-		</table>
-		
-			<h1>${message }</h1>
-	</form>
-</body>
-</html> --%>
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	
+<%@ page errorPage="ErrorPage.jsp" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +20,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>
-      Login Page
+   Fahrzeug Insurance
     </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -82,61 +60,18 @@
                 >
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                      <a href="index.jsp" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a
-                        href="#"
-                        class="nav-link dropdown-toggle"
-                        data-toggle="dropdown"
-                        >Insurance</a
-                      >
-                      <div class="dropdown-menu">
-                        <a href="login.jsp" class="dropdown-item"
-                          >Buy Insurance</a
-                        >
-                        <a href="login.jsp" class="dropdown-item"
-                          >Renew Insurance</a
-                        >
-                        <a href="login.jsp" class="dropdown-item"
-                          >Claim Insurance</a
-                        >
-                        <a href="login.jsp" class="dropdown-item"
-                          >Calculate Premium</a
-                        >
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Help</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Contact</a>
-                    </li>
-                  </ul>
-  
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mt-4 mb-4">
-                      <a class="link-outline" href="login_page.html"
-                        ><i class="icon fas fa-sign-in-alt"></i>&nbsp;Login</a
-                      >
-                    </li>
-                  </ul>
-                </div>
+      
               </div>
             </nav>
           </div>
         </header>
 
-    <!-- ***** login section start ***** -->
+    <!-- *****Admin login section start ***** -->
     <div id="member-login">
       <div class="container">
         <div class="login_content p-5 bg-white">
-          <div class="section-heading"><h1>Admin login</h1></div>
-          <form id="loginForm" modelAttribute="login" action="adminloginProcess"
-		method="post">
+          <div class="section-heading"><h1>Members login</h1></div>
+          <form action="adminloginProcess">
 
             <input type="text" name="username" id="username" placeholder="Username" />
             <input
@@ -147,8 +82,9 @@
               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
             />
 
-            <input type="submit" value=" Login" class="link-outline"> 
+            <input type="submit" value=" Submit" class="link-outline"> 
           </form>
+          </br>
         </div>
       </div>
     </div>

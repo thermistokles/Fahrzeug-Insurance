@@ -22,7 +22,6 @@ public class VehicleRegisterController {
 	 @RequestMapping("/VehicleRegister")
 		public ModelAndView est(@ModelAttribute UserVehicle v,HttpServletRequest request) {
 			
-			System.out.println("date in vehicle register:"+v.getPurchase_date());
 			int uid=Integer.parseInt(request.getParameter("user_id"));
 			v.setUser_vehicle_engine(Integer.parseInt(eserv.getEngine(v)));
 			

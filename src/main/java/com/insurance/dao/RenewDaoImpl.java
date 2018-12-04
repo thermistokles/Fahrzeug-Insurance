@@ -40,7 +40,8 @@ public class RenewDaoImpl implements RenewDao {
 			  p.setUserVehicleRegNo((rs.getString("guv_reg_no")));
 			  p.setClaimAmount((rs.getInt("gp_claim_amount")));
 			  p.setUserId(rs.getInt("gp_user_id"));
-			  
+			  p.setStartDate(rs.getString("gp_policy_start_date"));
+			  p.setEndDate(rs.getString("gp_policy_end_date"));
 		    return p;
 		  }
 		}

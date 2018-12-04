@@ -2,23 +2,31 @@ package com.insurance.controller;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.insurance.dao.PolicyDao;
 import com.insurance.model.Policy;
 import com.insurance.model.Ticket;
+import com.insurance.model.UserVehicle;
+import com.insurance.service.EstimateService;
 import com.insurance.service.RenewService;
 
 @Controller
 public class PolicyController {
 	@Autowired
 	PolicyDao policyDao;
+	
+	@Autowired
+	EstimateService estimateService;
 	
 	@Autowired
 	RenewService renewService;
@@ -37,8 +45,6 @@ public class PolicyController {
 		
 		String end_date=dtf.format(localdate2);
 		
-		//policy.setPolicyType(request.getParameter("policy_type"));
-		
 		String policy_type=request.getParameter("policy_type");
 		
 		
@@ -49,7 +55,6 @@ public class PolicyController {
 		policy.setEndDate(end_date);		
 		policy.setClaimAmount(Float.parseFloat(request.getParameter("idv")));
 		policy.setPolicyStatus(0);
-		//System.out.println("premium in policy con"+premium);
 		
 		policyDao.addPolicy(policy);
 		
@@ -65,5 +70,18 @@ public class PolicyController {
 		
 		return mv;
 	}
+	
+	@RequestMapping(value="/PrintPolicy/{id}")  
+	//fetching corresponding id
+    public ModelAndView renew(@PathVariable int id, HttpServletRequest request) {  
+        List<Policy> policy=renewService.getPolicyDetails(id); 
+        List<String> company = estimateService.getCompany();
+        List<String> model = estimateService.getCompany();
+       ModelAndView mav = new ModelAndView("/PrintPolicy");
+        mav.addObject("policy", policy);  
+        mav.addObject("company", company);
+        mav.addObject("model", model);
+        return mav;
+    } 
 	
 }

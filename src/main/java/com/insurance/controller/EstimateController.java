@@ -22,7 +22,7 @@ public class EstimateController extends HttpServlet {
 	EstimateService eserv;
 	
 	@RequestMapping("/calculate_premium_estimate")
-	public ModelAndView calc() {
+	public ModelAndView calcpre() {
 		
 			
 		//Getting vehicle information and passing it to the vehicle info page

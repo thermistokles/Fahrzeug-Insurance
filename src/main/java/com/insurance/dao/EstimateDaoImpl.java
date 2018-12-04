@@ -39,7 +39,6 @@ import java.util.Date;
 		//get engine number method	
 				public String getEngine(UserVehicle uv) {
 			
-					System.out.println("vehicle engine in getengine:"+uv.getUser_vehicle_engine());
 					 String query="select gv_cc from gr10_vehicledetails  where gv_model='"+uv.getUser_vehicle_model()+"' ";			 
 					//Object[] inputs = new Object[] {v.getVehicle_model()};						
 					String engine_no = template.queryForObject(query,String.class); 	
@@ -50,7 +49,6 @@ import java.util.Date;
 				//get car age method
 				public float getAge(String dop) {
 					
-					System.out.println("date in getAge"+dop);
 					
 					
 					   Date d=new Date();
@@ -88,7 +86,6 @@ import java.util.Date;
 				
 				//method to fetch dep percentage
 				public int dep_value(float age) {
-					System.out.println("age"+age);
 					String query="select gd_dep_rate from gr10_deprate where "+age+" between gd_start_age and gd_end_age ";			 
 					//Object[] inputs = new Object[] {age};						
 					int dep = template.queryForObject(query,Integer.class); 				

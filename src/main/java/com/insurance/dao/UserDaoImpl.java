@@ -29,13 +29,14 @@ public class UserDaoImpl implements UserDao {
 		return jdbcTemplate.update(query);
 	    }
 	public User validateUser(Login login) {
-	    String sql = "select * from gr10_users where gu_username='" +login.getUsername() + "' and gu_password='" + login.getPassword()+ "'";
+		
+	    String sql = "select * from gr10_users where gu_username='"+login.getUsername()+"' and gu_password='"+login.getPassword()+"'";
 	    List<User> users = jdbcTemplate.query(sql, new UserMapper());
 	    return users.size() > 0 ? users.get(0) : null;
 	    }
 
 public int getUid(String username) {
-	String query="select gu_id from gr10_users  where gu_username='"+username+"' ";			 
+	String query="select gu_id from gr10_users where gu_username='"+username+"' ";			 
 							
 	int uid = jdbcTemplate.queryForObject(query,Integer.class); 
 	return uid;

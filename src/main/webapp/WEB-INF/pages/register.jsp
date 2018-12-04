@@ -76,54 +76,59 @@
             <h1 class="text-capitalize">Create your Account</h1>
           </div>
           <form action="registerProcess" method="post">
-            <input
+         <input
               type="text"
               id="username"
               name="fName"
               placeholder="Enter Your First Name"
-              min=2
-              max=15
-              required
+              pattern=[A-Za-z]+
+        
+			 title="Enter Valid Name"
+              required  
             />
             <input
             type="text"
             id="username"
             name="lName"
             placeholder="Enter Your Last Name"
-            required
-            min=2
-            max=15
+               pattern=[A-Za-z]+
+            maxlength="15"
+            	 title="Enter Valid Name"
+            required            
           />
-
             <input
               type="email"
               name="email"
               placeholder="Enter Your Email Id"
+              title="e.g. abc@gmail.com,xyz@yahoo.com etc."
               required
-              min=7
-              max=20
             />
 
             <input
-              type="number"
+              type="tel"
               name="phone"
               placeholder="Enter Your Contact Number"
-              title="Enter valid contact number"
+             pattern="[6-9]{1}[0-9]{9}" 
+             title="Please enter a valid 10 digit mobile number" 
               required
             />
             <input
-              type="text"
+              type="textarea"  rows="4" 
               name="address"
               placeholder="Enter Your Address"
-              title="Must contain email address in the format 'someone@example.com'"
+              maxlength="150"
+              title="Enter proper Address"
               required
             />
 
-            <input
+             <input
             type="text"
             id="username"
             name="username"
             placeholder="Enter User Name"
+            title="eg. Insurance12"
+             pattern="[A-Za-z0-9]+"
+          
             required
           />
 
@@ -137,16 +142,7 @@
               required
             />
             
-            <input
-              type="password"
-              name="confirm_password"
-              id="confirm_password"
-              placeholder="Enter Your Password Again"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  
-              class="form-control" 
-              required
-            />
+    
           
 			<input type="submit" value="register"  class="link-outline">
            
